@@ -1,0 +1,10 @@
+# Site settings
+title: Dave Korhumel
+
+# Link settings
+permalink: pretty
+
+# Build settings
+markdown: kramdown
+exclude:
+    - README.md
