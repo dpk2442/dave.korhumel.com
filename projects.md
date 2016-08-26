@@ -1,0 +1,19 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+### Stratum Game Server
+
+Stratum Game Server is a turn based game engine designed to pit autonomous
+players against each other. The goal of the project is to produce a system where
+people can create autonomous systems, and compete them against each other by
+playing games. The project is still in early stages of development.
+
+- Website
+- GitHub
+
+### Cece
+
+Cece is a static site generator for how-to sites.
