@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ site.title }}</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{page.title}} | {{ site.title }}</title>
+
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
 
-    <h1>{{ site.title }}</h1>
+    <header>
+        <img src="/assets/images/dave.jpg">
+        <h1>
+            <a href="/">
+                {{ site.title }}
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="/">About Me</a></li>
+                <li><a href="/projects/">Projects</a></li>
+                <li><a href="/resume/">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h2>{{ page.title }}</h2>
+    <section id="content">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+    </section>
 
-    {{ content }}
+    <footer>
+        <div><a href="mailto:dave@korhumel.com">dave@korhumel.com</a></div>
+        <div>
+            <p>Copyright &copy; {{ 'now' | date: "%Y" }}</p>
+            <p>Dave Korhumel</p>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/dpk2442" id="linkedin-link" title="LinkedIn">
+                        <img src="/assets/images/GitHub-Mark-32px.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/dpk2442" id="github-link" title="GitHub">
+                        <img src="/assets/images/In-Black-34px-R.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
 </body>
 </html>
