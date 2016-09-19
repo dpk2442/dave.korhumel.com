@@ -1,30 +1,29 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
-    width: calc(100% - 4em);
-    margin: 1em auto;
-    max-width: 700px;
+    width: calc(100% - #{2 * $bodySideMargin});
+    margin: $bodyTopBottomMargin auto;
+    max-width: $bodyMaxWidth;
 }
 
 header {
-    padding-bottom: 1em;
-    border-bottom: 1px solid #CCC;
+    padding-bottom: $headerBottomPadding;
+    border-bottom: 1px solid $sectionDividerColor;
     img {
         border-radius: 50%;
-        height: 5em;
+        height: $headerImageHeight;
         float: left;
-        margin-right: 1em;
-        @media (max-width: 500px) {
-            height: 5em;
+        margin-right: $headerImageRightMargin;
+        @media (max-width: $headerMobileBreakpoint) {
             float: initial;
             vertical-align: middle;
         }
     }
     h1 {
         display: inline-block;
-        font-size: 2em;
+        font-size: $headerTextFontSize;
         margin: 0;
-        @media (max-width: 500px) {
-            font-size: 1.5em;
+        @media (max-width: $headerMobileBreakpoint) {
+            font-size: $headerMobileTextFontSize;
         }
         a {
             color: black;
@@ -32,9 +31,9 @@ header {
         }
     }
     nav {
-        margin-top: 1em;
-        font-size: 1.3em;
-        @media (max-width: 500px) {
+        margin-top: $headerNavTopMargin;
+        font-size: $headerNavFontSize;
+        @media (max-width: $headerMobileBreakpoint) {
             text-align: center;
         }
         ul {
@@ -45,55 +44,51 @@ header {
                 display: inline-block;
                 &:not(:first-child) {
                     &::before {
-                        margin: 0 0.2em;
+                        margin: 0 $headerNavSeparatorSideMargin;
                         content: "|";
                     }
                 }
-                @media (max-width: 350px) {
+                @media (max-width: $headerNavMobileBreakpoint) {
                     &::before {
-                        margin-right: 0.2em;
+                        margin-right: $headerNavSeparatorSideMargin;
                         content: "|";
                     }
                     &::after {
-                        margin-left: 0.2em;
+                        margin-left: $headerNavSeparatorSideMargin;
                         content: "|";
                     }
                 }
                 a {
                     color: black;
                     text-decoration: none;
-                    padding: 0.1em 0.3em;
+                    padding: $headerNavLinkTopBottomPadding $headerNavLinkSidePadding;
                 }
             }
         }
     }
 }
 
-#content {
-    font-size: 1em;
-}
-
 footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 2em;
-    padding-top: 1em;
-    border-top: 1px solid #CCC;
+    margin-top: $footerTopMargin;
+    padding-top: $footerTopPadding;
+    border-top: 1px solid $sectionDividerColor;
     div {
         display: inline-block;
         flex-grow: 1;
         &:nth-child(2) {
-            margin: 0 2em;
+            margin: 0 $footerColumnMarginBetween;
             text-align: center;
-            @media (max-width: 460px) {
+            @media (max-width: $footerMobileBreakpoint) {
                 order: 2;
-                margin-top: 0.75em;
+                margin-top: $footerMobileMiddleColumnTopMargin;
             }
         }
         &:nth-child(3) {
             text-align: right;
-            @media (max-width: 460px) {
+            @media (max-width: $footerMobileBreakpoint) {
                 order: 1;
             }
         }
@@ -108,11 +103,11 @@ footer {
             li {
                 display: inline-block;
                 &:not(:first-child) {
-                    margin-left: 0.5em;
+                    margin-left: $footerListElementMarginBetween;
                 }
                 a {
                     img {
-                        height: 1.5em;
+                        height: $footerListLinkImageHeight;
                     }
                 }
             }
