@@ -1,5 +1,4 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
     width: calc(100% - #{2 * $bodySideMargin});
     margin: $bodyTopBottomMargin auto;
     max-width: $bodyMaxWidth;
@@ -7,7 +6,6 @@ body {
 
 header {
     padding-bottom: $headerBottomPadding;
-    border-bottom: 1px solid $sectionDividerColor;
     img {
         border-radius: 50%;
         height: $headerImageHeight;
@@ -24,10 +22,6 @@ header {
         margin: 0;
         @media (max-width: $headerMobileBreakpoint) {
             font-size: $headerMobileTextFontSize;
-        }
-        a {
-            color: black;
-            text-decoration: none;
         }
     }
     nav {
@@ -59,8 +53,6 @@ header {
                     }
                 }
                 a {
-                    color: black;
-                    text-decoration: none;
                     padding: $headerNavLinkTopBottomPadding $headerNavLinkSidePadding;
                 }
             }
@@ -74,7 +66,6 @@ footer {
     flex-wrap: wrap;
     margin-top: $footerTopMargin;
     padding-top: $footerTopPadding;
-    border-top: 1px solid $sectionDividerColor;
     div {
         display: inline-block;
         flex-grow: 1;
