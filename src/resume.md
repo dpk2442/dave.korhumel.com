@@ -1,3 +1,13 @@
+---
+layout: default.html
+title: Resume
+permalink: /resume/
+---
+
+My resume is included below. For a downloadable pdf, [click here](/assets/resume.pdf "resume.pdf").
+
+---
+
 ### EDUCATION
 
 - Rochester Institute of Technology, Rochester, NY
@@ -5,12 +15,12 @@
 
 ### WORK EXPERIENCE
 
-- Microsoft
-  August 2016 - Present
+- Microsoft  
+  August 2016 - Present  
   Software Engineer
     - Working on Skype Chat Service
-- Microsoft
-  June 2015 - August 2015
+- Microsoft  
+  June 2015 - August 2015  
   Software Engineer Intern
     - Worked on the Real Time Media team for Skype
     - Created a system profiler for encoding and decoding performance

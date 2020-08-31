@@ -28,13 +28,13 @@
 
     <section id="content">
         <h1>{{ page.title }}</h1>
-        {{ content }}
+        {{ contents }}
     </section>
 
     <footer>
         <div><a href="mailto:dave@korhumel.com">dave@korhumel.com</a></div>
         <div>
-            <p>Copyright &copy; {{ 'now' | date: "%Y" }}</p>
+            <p>Copyright &copy; {{ build_date.year }}</p>
             <p>Dave Korhumel</p>
         </div>
         <div>
